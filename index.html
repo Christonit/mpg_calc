@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora v 0.5 Alpha</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+
+<div class="row">
+  
+  <div class="small-12 medium-12 large-12 columns">
+  <div class="row">
+ <form id="brand-search" role="form" class="small-12 medium-12 large-10 large-push-1 columns">
+        <div class="form-group">
+          <input type="input" id="txt-search" class="small-12 medium-12  large-12 columns" placeholder="Type your search character">
+        </div>
+ </form>
+  </div>
+ <div id="filter-records">
+  
+ </div>
+    
+  </div>
+  
+</div>
+
+<div class="row">
+  
+  <div id="car-model" class=" hide">
+   <div id="form-steps-label">
+    <a href="#" id="v-brand--btn" class="v-btn active">  Vehiculo</a>
+    <a href="#" id="v-model--btn" class="v-btn active">  Seleccionar modelo</a>
+    <a href="#" id="v-year--btn" class="v-btn">  Seleccionar Año</a>
+  </div>
+    <div  id="v-model" class="container">
+    </div>
+    
+    <div  id="v-model-year" class="container hide">
+    </div>
+    
+  </div>
+  
+  <form name="vehicle models" id="mobile-vehicle" class="hide">
+  <select id="mobile-v-model">
+    <option data-model="-">-</option>
+  </select>
+    
+   
+    <a href="#" id="fwd-btn" class="hide button">Siguiente</a>
+  </form>
+  
+  
+  <div id="mobile-v-year" class="hide">
+  </div>
+  
+  <a href="#" id="continue-btn" class="hide button">Calculate MPG </a>
+  
+  <div id="mpg-calculator" class="row hide">
+    <div id="v-resume" class= "small-12 medium-5 large-5 columns">
+      <h1 id="v-brand-model"> </h1>
+      
+      <p>MPG en ciudad <span data-citympg=''> </span></p>
+      <p>MPG en autopistas  <span data-hwmpg=''> </span></p>
+      <p>Promedio de MPG <span data-avgmpg=''> </span></p>
+    </div>
+    <div id="calc-values" class="small-12 medium-7 large-6 columns">
+      
+      <form class="form-horizontal" name='estimator'>
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class=" control-label" for="buc_500">Combustible</label>
+  
+      
+        <select data-fuel>
+          <option data-fuel-type='premium' value='220'>
+            Gasolina Premium
+          </option>
+          
+          <option data-fuel-type='regular' value='200'>
+            Gasolina Regular
+          </option>
+          
+        </select>
+      
+  
+  
+</div>
+  
+<!-- Text input-->
+<div class="form-group">
+  <label class=" control-label" for="buc_500">Cantidad RD$</label>
+  
+      
+        <input name="cantidad_rd$" type="number" placeholder="" required value="">
+      
+  
+  
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class=" control-label" for="buc_200">Galones</label>  
+  
+  <input name="cantidad_galones" type="number" placeholder="" class="form-control input-md moneda" required value="">
+    
+  
+</div>
+
+</fieldset>
+        <button id="mpg-calculate-btn" class="button">
+          CALCULAR
+        </button>
+</form>
+      <div id="mpg-resume" class='hide'>
+        <h1 data-fuel-type></h1>
+        <div id="budget-fuel">
+          <span><h2 id="amount-filled"></h2><p>Tu presupuesto</p></span>
+          <span><h2 id="total-galons"></h2><p>Combustible total</p></span>
+          
+        </div>
+        
+        <span id="estimated-distance"><h1></h1> <p>Estimado distancia recorrible</p></span>
+      
+        
+      </div>
+      
+      
+          
+    </div>
+    
+    
+  </div>
+  
+<div id="btn-grid" class="hide">
+        
+        <button name="otherCar" class="hollow button">Seleccionar otro vehículo</button>
+      
+      <button name="reset" class="button">Calcular otra cifra</button>
+      
+      </div>
+  
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
